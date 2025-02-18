@@ -1,0 +1,23 @@
+/* src/pages/OrderPage.css */
+.orders-page main {
+    padding: 2rem;
+}
+
+.orders-page h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.orders-page ul {
+    list-style: none;
+    padding: 0;
+}
+
+.orders-page li {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

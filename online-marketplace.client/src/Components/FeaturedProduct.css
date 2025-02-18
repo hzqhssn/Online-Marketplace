@@ -1,0 +1,32 @@
+/* src/components/FeaturedProducts.css */
+.featured-products {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    width: 250px;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #fff;
+}
+
+    .product-card img {
+        max-width: 100%;
+        height: auto;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 0.5rem;
+    }
+
+    .product-card h3 {
+        margin: 0.5rem 0;
+    }
