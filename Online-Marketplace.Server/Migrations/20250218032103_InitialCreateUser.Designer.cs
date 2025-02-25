@@ -11,8 +11,8 @@ using OnlineMarketplace.Server.Data;
 namespace OnlineMarketplace.Server.Migrations
 {
     [DbContext(typeof(UserDbContext))]
-    [Migration("20250217231147_InitialCreateUsers")]
-    partial class InitialCreateUsers
+    [Migration("20250218032103_InitialCreateUser")]
+    partial class InitialCreateUser
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,7 +36,15 @@ namespace OnlineMarketplace.Server.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PasswordHash")
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

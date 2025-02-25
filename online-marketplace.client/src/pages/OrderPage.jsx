@@ -1,7 +1,5 @@
-// src/pages/OrderPage.jsx
-import React, { useEffect, useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+﻿import { useEffect, useState } from 'react';
+import Footer from '../components/Footer'; // ✅ Keep Footer, but remove Header
 
 function OrderPage() {
     const [orders, setOrders] = useState([]);
@@ -28,7 +26,6 @@ function OrderPage() {
 
     return (
         <div className="orders-page">
-            <Header />
             <main>
                 <h1>Your Orders</h1>
                 {loading ? (

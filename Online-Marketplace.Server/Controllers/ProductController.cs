@@ -46,7 +46,6 @@ namespace OnlineMarketplace.Server.Controllers
             return CreatedAtAction(nameof(GetProduct), new { id = product.Id }, product);
         }
 
-        // PUT: api/Product/5
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProduct(int id, Product product)
         {

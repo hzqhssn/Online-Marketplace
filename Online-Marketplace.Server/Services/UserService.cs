@@ -42,7 +42,7 @@ namespace Online_Marketplace.Server.Services
 			var user = new User
 			{
 				Email = dto.Email,
-				PasswordHash = passwordHash
+                Password = passwordHash
 			};
 
 			_dbContext.Users.Add(user);
@@ -60,7 +60,7 @@ namespace Online_Marketplace.Server.Services
 			}
 
 			var passwordHash = ComputeSha256Hash(dto.Password);
-			if (user.PasswordHash != passwordHash)
+			if (user.Password != passwordHash)
 			{
 				return null;
 			}

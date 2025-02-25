@@ -1,27 +1,49 @@
-/* src/components/Header.css */
-.header {
+﻿.header {
+    position: fixed; /* ✅ Fix the header at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #007bff;
+    color: white;
+    padding: 15px;
+    font-size: 1.2rem;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    background-color: #333;
-    padding: 1rem;
+    align-items: center;
+    z-index: 1000; /* ✅ Ensures the header stays on top of other elements */
 }
 
-    .header .logo a {
-        color: #fff;
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
 
 .navigation ul {
-    list-style: none;
     display: flex;
-    gap: 1rem;
-    margin: 0;
+    list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-    .navigation ul li a {
-        color: #fff;
-        font-size: 1rem;
+.navigation li {
+    margin-left: 15px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+    .navigation a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
     }
+
+/* ✅ Add space below header to prevent content overlap */
+body {
+    padding-top: 60px; /* Adjust based on header height */
+}

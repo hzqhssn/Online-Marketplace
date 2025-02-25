@@ -23,8 +23,7 @@ namespace OnlineMarketplace.Server.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
-            var users = await _dbContext.Users.ToListAsync();
-            return Ok(users);
+            return await _dbContext.Users.ToListAsync();
         }
 
         // GET: api/User/5
@@ -35,6 +34,15 @@ namespace OnlineMarketplace.Server.Controllers
             if (user == null)
                 return NotFound();
             return Ok(user);
+        }
+
+        // POST: api/User
+        [HttpPost]
+        public async Task<ActionResult<User>> CreateUser(User user)
+        {
+            _dbContext.Users.Add(user);
+            await _dbContext.SaveChangesAsync();
+            return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
         }
     }
 }
